@@ -1,5 +1,7 @@
 body {
   background: black;
+  width: 100%;
+  height: 100%;
 }
 
 #topleft {
@@ -44,7 +46,6 @@ body {
   overflow: auto;
   text-align: center;
   transition: 1s;
-  font-size: 3rem;
   color: white;
   z-index: -1;
 }
@@ -67,4 +68,19 @@ body {
 .wind {
   background-image: url(../images/wind-image1.jpg);
   background-size: cover;
+}
+
+#logo{
+  width: 300px;
+  margin-left: 40%;
+  margin-top: 15%;
+  border-radius: 25%;
+}
+
+.hide {
+  display: none;
+}
+
+#content{
+  text-align: center;
 }

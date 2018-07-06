@@ -3,6 +3,7 @@ var earth = document.getElementById('topleft');
 var wind = document.getElementById('topright');
 var fire = document.getElementById('bottomleft');
 var water = document.getElementById('bottomright');
+var logo = document.getElementById('logo')
 
 earth.addEventListener("click", function(){
   earth.classList.remove('earth');
@@ -15,6 +16,7 @@ earth.addEventListener("click", function(){
   water.classList.remove('active');
   earth.classList.add('earth');
   earth.classList.add('active');
+  logo.classList.add('hide');
 })
 
 fire.addEventListener("click", function(){
@@ -28,6 +30,7 @@ fire.addEventListener("click", function(){
   water.classList.remove('active');
   fire.classList.add('fire');
   fire.classList.add('active');
+  logo.classList.add('hide');
 })
 
 water.addEventListener("click", function(){
@@ -41,6 +44,7 @@ water.addEventListener("click", function(){
   water.classList.remove('active');
   water.classList.add('water');
   water.classList.add('active');
+  logo.classList.add('hide');
 })
 
 wind.addEventListener("click", function(){
@@ -54,6 +58,7 @@ wind.addEventListener("click", function(){
   water.classList.remove('active');
   wind.classList.add('wind');
   wind.classList.add('active');
+  logo.classList.add('hide');
 })
 
 
@@ -99,7 +104,7 @@ function processData(trackList, location){
 
 function createCard(element, location){
 
-    
+
     let card = document.createElement("div");
     card.classList.add("card");
     let track = document.createElement("h1");
