@@ -46,7 +46,6 @@ body {
   overflow: auto;
   text-align: center;
   transition: 1s;
-  font-size: 3rem;
   color: white;
   z-index: -1;
 }
@@ -80,4 +79,8 @@ body {
 
 .hide {
   display: none;
+}
+
+#content{
+  text-align: center;
 }
