@@ -51,22 +51,22 @@ body {
 }
 
 .fire {
-  background-image: url(../images/fire-note-image6.jpg);
+  background-image: url(../images/fire.jpg);
   background-size: cover;
 }
 
 .water {
-  background-image: url(../images/water.jpg);
+  background-image: url(../images/water1.jpg);
   background-size: cover;
 }
 
 .earth {
-  background-image: url(../images/earth-doyle-peak-image7.jpg);
+  background-image: url(../images/earth.jpg);
   background-size: cover;
 }
 
 .wind {
-  background-image: url(../images/wind-image1.jpg);
+  background-image: url(../images/wind.jpg);
   background-size: cover;
 }
 
