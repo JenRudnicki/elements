@@ -100,23 +100,15 @@ let waterTracks = [];
 
 document.getElementById("bottomright").addEventListener("click", waterClick);
 
-
-
 function waterClick(event){
 
   let bl = document.querySelector("#bottomleft .cardContainer");
   let tl = document.querySelector("#topleft .cardContainer");
   let tr = document.querySelector("#topright .cardContainer");
 
-
-  while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);
-  }
-
-  while (tl.hasChildNodes()){ tl.removeChild(tl.lastChild);
-  }
-
-  while (tr.hasChildNodes()){ tr.removeChild(tr.lastChild);
-  }
+  while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);}
+  while (tl.hasChildNodes()){ tl.removeChild(tl.lastChild);}
+  while (tr.hasChildNodes()){ tr.removeChild(tr.lastChild);}
 
 // console.log("In Water");
 
@@ -128,6 +120,68 @@ fetch(
 
 
 }
+
+///////////////////////////////
+
+let windTracks = []; 
+
+document.getElementById("topright").addEventListener("click", windClick);
+
+function windClick(event){
+
+  let bl = document.querySelector("#bottomleft .cardContainer");
+  let tl = document.querySelector("#topleft .cardContainer");
+  let br = document.querySelector("#bottomright .cardContainer");
+
+  while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);}
+  while (tl.hasChildNodes()){ tl.removeChild(tl.lastChild);}
+  while (br.hasChildNodes()){ br.removeChild(br.lastChild);}
+
+// console.log("In Water");
+
+fetch(
+  "https://galvanize-cors.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?apikey=19f997a50a7117eb12ee72fea784a8dc&q_track=Wind&page_size=10")
+  .then(response => response.json())
+  .then(result => {windTracks = result.message.body.track_list; return result;})
+  .then(result => {console.log(windTracks); processData(windTracks,"#topright .cardContainer")});
+
+
+}
+
+
+
+///////////////////////////////
+
+let earthTracks = []; 
+
+document.getElementById("topleft").addEventListener("click", earthClick);
+
+function earthClick(event){
+
+  let bl = document.querySelector("#bottomleft .cardContainer");
+  let br = document.querySelector("#bottomright .cardContainer");
+  let tr = document.querySelector("#topright .cardContainer");
+
+  while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);}
+  while (br.hasChildNodes()){ br.removeChild(br.lastChild);}
+  while (tr.hasChildNodes()){ tr.removeChild(tr.lastChild);}
+
+// console.log("In Water");
+
+fetch(
+  "https://galvanize-cors.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?apikey=19f997a50a7117eb12ee72fea784a8dc&q_track=Earth&page_size=10")
+  .then(response => response.json())
+  .then(result => {earthTracks = result.message.body.track_list; return result;})
+  .then(result => {console.log(earthTracks); processData(earthTracks,"#topleft .cardContainer")});
+
+
+}
+
+
+
+///////////////////////////////
+
+
 
 
 function processData(trackList, location){
