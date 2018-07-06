@@ -83,10 +83,29 @@ fetch(
 let waterTracks = []; 
 
 document.getElementById("bottomright").addEventListener("click", waterClick);
+let bl = document.getElementById("bottomleft");
+let tl = document.getElementById("topleft");
+let tr = document.getElementById("topright");
+
+
+
 
 function waterClick(event){
 
-console.log("In Water");
+  let bl = document.getElementById("bottomleft");
+  let tl = document.getElementById("topleft");
+  let tr = document.getElementById("topright");
+
+  while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);
+  }
+
+  while (tl.hasChildNodes()){ tl.removeChild(tl.lastChild);
+  }
+
+  while (tr.hasChildNodes()){ tr.removeChild(tr.lastChild);
+  }
+
+// console.log("In Water");
 
 fetch(
   "https://galvanize-cors.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?apikey=19f997a50a7117eb12ee72fea784a8dc&q_track=Water&page_size=10")
