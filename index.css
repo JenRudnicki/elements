@@ -1,0 +1,66 @@
+body {
+  background: black;
+}
+
+#topleft {
+  top: 0;
+  left: 0;
+}
+
+#topright {
+  top:0;
+  right: 0%;
+}
+
+#bottomleft {
+  bottom: 0%;
+  left: 0;
+}
+
+#bottomright {
+  bottom: 0%;
+  right: 0%;
+}
+
+.nav {
+  position:absolute;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.nav:hover{
+  cursor:pointer;
+}
+
+.active {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  overflow: auto;
+  text-align: center;
+  transition: 1s;
+  font-size: 3rem;
+  color: white;
+  z-index: -1;
+}
+
+.fire {
+  background: red;
+}
+
+.water {
+  background: blue;
+}
+
+.earth {
+  background: green;
+}
+
+.wind {
+  background: purple;
+}
