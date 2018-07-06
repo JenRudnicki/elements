@@ -27,7 +27,7 @@ body {
 .nav {
   position:absolute;
   padding: 10px;
-  margin: 10px;
+  margin: 25px;
   color: white;
 }
 
@@ -83,4 +83,12 @@ body {
 
 #content{
   text-align: center;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.5);;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 25px;
 }
