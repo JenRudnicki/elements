@@ -59,9 +59,9 @@ wind.addEventListener("click", function(){
 
 let baseURI = "https://galvanize-cors.herokuapp.com/http://api.musixmatch.com/ws/1.1/"
 
-let fireTract = "track.search?apikey=19f997a50a7117eb12ee72fea784a8dc&q_track=Fire&page_size=10"
+////////////////////////////////
 
-let fireTracks = []
+let fireTracks = [];  // duplicate
 
 document.getElementById("bottomleft").addEventListener("click", fireClick);
 
@@ -71,18 +71,26 @@ fetch(
   .then(response => response.json())
   .then(result => {fireTracks = result.message.body.track_list; return result;})
   .then(result => {console.log(fireTracks); processData(fireTracks)});
-
 }
-  function processData(trackList){
+
+//////////////////////////////////
+
+
+
+
+
+
+
+function processData(trackList){
     trackList.forEach( element => createCard(element));
   }
 
-  function createCard(element){
+function createCard(element){
 
     
     let card = document.createElement("div");
     card.classList.add("card");
-    card.innerText = `Track Name:  ${element.track.track_name} \n Artist Name: ${element.track.artist_name}`;
+    card.innerText = `Track Name:  ${element.track.track_name} \n Artist Name: ${element.track.artist_name} \n`;
 
     document.getElementById("bottomleft").appendChild(card);
   }
