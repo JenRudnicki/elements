@@ -50,17 +50,21 @@ body {
 }
 
 .fire {
-  background: red;
+  background-image: url(../images/fire-note-image6.jpg);
+  background-size: cover;
 }
 
 .water {
-  background: blue;
+  background-image: url(../images/water.jpg);
+  background-size: cover;
 }
 
 .earth {
-  background: green;
+  background-image: url(../images/earth-doyle-peak-image7.jpg);
+  background-size: cover;
 }
 
 .wind {
-  background: purple;
+  background-image: url(../images/wind-image1.jpg);
+  background-size: cover;
 }
