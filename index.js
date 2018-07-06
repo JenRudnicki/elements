@@ -96,14 +96,14 @@ function waterClick(event){
   let tl = document.getElementById("topleft");
   let tr = document.getElementById("topright");
 
-  while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);
-  }
+  // while (bl.hasChildNodes()){ bl.removeChild(bl.lastChild);
+  // }
 
-  while (tl.hasChildNodes()){ tl.removeChild(tl.lastChild);
-  }
+  // while (tl.hasChildNodes()){ tl.removeChild(tl.lastChild);
+  // }
 
-  while (tr.hasChildNodes()){ tr.removeChild(tr.lastChild);
-  }
+  // while (tr.hasChildNodes()){ tr.removeChild(tr.lastChild);
+  // }
 
 // console.log("In Water");
 
